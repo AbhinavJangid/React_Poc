@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 import ProductItem from '../Components/ProductItem'
 
 
@@ -7,9 +7,12 @@ export default function ProductDetail() {
 
 
     const data = useLoaderData();
-    console.log("single product data in ProductDetial : ");
+    console.log("single product data in ProductDetial : ",data);
+    const idFromPara = useParams();
+    console.log("single product data in ProductDetial : ", idFromPara);
+    
   return (
-    <ProductItem data={data} />
+    <ProductItem data={[data, idFromPara]} />
   )
 }
 export async function loader({request, params}) {
