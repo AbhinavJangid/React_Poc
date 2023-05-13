@@ -8,7 +8,6 @@ export default function () {
     <>
     
     <div>
-        <h1>RootLayout</h1>
         <Navbar title="MyApp"/> 
         <Outlet/>
         <Footer/>

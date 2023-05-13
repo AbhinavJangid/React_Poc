@@ -1,0 +1,21 @@
+.product-detail{
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+}
+
+.image-slider{
+    margin-top: 1%;
+    text-align: center;
+}
+
+.product-container{
+    text-align: center;
+    position: center;
+}
+
+.form{
+    text-align: center;
+    position: center;
+}

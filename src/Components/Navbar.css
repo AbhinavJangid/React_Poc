@@ -1,0 +1,26 @@
+
+
+.navbar-brand{
+    font-size: 40px;   
+    font-family: "Lucida Console", Courier, monospace;   
+    font-weight: bold;   
+    text-align: center;
+}
+.navbar-nav{
+
+    font-size: 15px;   
+    font-family: 'georgia';   
+    font-weight: bold;   
+    text-align: center;
+  
+
+}
+
+.nav-item{
+    text-align: center;
+    margin: 1.25px;
+}
+
+.navStyle{
+    color: aqua;
+}

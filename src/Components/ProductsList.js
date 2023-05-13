@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./ProductsList.css"
+import "./ProductsList.css";
 
 export default function ProductsList(props) {
   console.log("props data inside prodList", props.products);
@@ -9,25 +9,40 @@ export default function ProductsList(props) {
   return (
     <div className="container">
       <h1>All productss</h1>
-      <ul className="container">
+      <ul className="grid">
         {props.products.map((product) => (
           <li key={product.id} className="card">
             <Link to={`${product.id}`}>
               {/* <Link to={"about"} > */}
-              <div className="card">
-                <img src={product.thumbnail}></img>
+              {/* <div className="card">
+                <img src={product.thumbnail} className="prd-img"></img>
                 <h2>{product.title}</h2>
                 <h4>{product.description}</h4>
-              </div>
+              </div> */}
               <div className="scroll-snap-card">
+                {/* <div className="slide red"> */}
+                {/* <img src={product.thumbnail} className="prd-img"></img> */}
+
                 <div className="slide red">
-                  <p className="tip">Scroll On Me</p>
+                  <div className="card-image-card">
+                    <h2>{product.title}</h2>
+                  </div>
                 </div>
+                {/* </div> */}
                 <div className="slide blue">
-                  <p className="tip">Scroll On Me</p>
+                  <div className="sub-card">
+                    <img src={product.thumbnail} className="card-image"></img>
+                    {/* <img
+                        src={product.thumbnail}
+                        className="image-above"
+                      ></img> */}
+                    {/* <div className="image-above-card">
+                      
+                    </div> */}
+                  </div>
                 </div>
                 <div className="slide green">
-                  <p className="tip">Scroll On Me</p>
+                  <p>{product.description}</p>
                 </div>
               </div>
             </Link>

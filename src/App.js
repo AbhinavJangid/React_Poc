@@ -10,6 +10,7 @@ import ProductDetail, {
   loader as productDetailLoader,
 } from "./Pages/ProductDetail";
 import ProductItem from "./Components/ProductItem";
+import AddProduct from "./Components/AddProduct";
 function App() {
   // const router = createBrowserRouter([
   //   {
@@ -49,11 +50,11 @@ function App() {
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
         {
-          path: "products",
-          element: <ProductsLayout />,
-          children: [
-            {
-              path: "allProducts",
+          // path: "products",
+          // element: <ProductsLayout />,
+          // children: [
+          //   {
+              path: "products",
               children: [
                 {
                   index:true,
@@ -66,12 +67,13 @@ function App() {
                   loader: productDetailLoader,
                   element: <ProductDetail />,
                 },
-              ],
-            },
+             // ],
+            // },
             //  element: <About />, loader: productDetailLoader}]},
           ],
         },
         { path: "productDetail", element: <ProductItem /> },
+        { path: "addProduct", element: <AddProduct/>},
       ],
     },
   ]);
