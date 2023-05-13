@@ -34,7 +34,7 @@ export default function ProductItem(props) {
       .then((res) => {
         alert("Deleted!!!");
         console.log("Deleted", res);
-        navigate("/products/allProducts");
+        navigate("/products");
       })
       .catch((err) => console.log("error occured", err));
   };
@@ -52,7 +52,7 @@ export default function ProductItem(props) {
       .then((res) => {
         alert("Successfully edited!!!");
         console.log("Edited!!", res);
-        navigate("/products/allProducts");
+        navigate("/products");
       })
       .catch((err) => console.log("error occured", err));
   };
