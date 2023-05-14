@@ -12,7 +12,7 @@ export default function Products() {
 }
 
 export async function loader() {
-    const response = await fetch('https://dummyjson.com/products');
+    const response = await fetch('https://dummyjson.com/products?skip=5&limit=10');
   
     if (!response.ok) {
       // ...
